@@ -1,0 +1,32 @@
+{
+  "name": "icecream",
+  "plugin_schema": "2",
+  "release": "11.2-RELEASE",
+  "artifact": "https://github.com/jed-frey-freenas-plugins/iocage-plugin-icecream.git",
+  "properties": {
+    "boot": "on",
+    "allow_raw_sockets": "1",
+    "dhcp": "on",
+    "bpf": "yes",
+    "vnet": "on"
+  },
+  "pkgs": [
+    "autoconf",
+    "automake",
+    "gmake",
+    "libtool",
+    "avahi-app",
+    "avahi-autoipd",
+    "gcc8"
+  ],
+  "packagesite": "http://pkg.FreeBSD.org/${ABI}/quarterly",
+  "fingerprints": {
+	  "iocage-plugins": [
+		  {
+		  "function": "sha256",
+		  "fingerprint": "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
+	  }
+	  ]
+  },
+  "official": false
+}
