@@ -16,7 +16,8 @@
       "libtool",
       "avahi-app",
       "avahi-autoipd",
-      "gcc8"
+      "gcc8",
+      "daemontools"
    ],
    "official" : false,
    "name" : "icecream",
