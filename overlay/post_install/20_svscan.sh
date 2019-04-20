@@ -16,6 +16,7 @@ sysrc svscan_servicedir=/var/service
 #                       the logs will be placed in the specified directory.
 #                       The FreeBSD port default is to run svscan through
 #                       readproctitle.
+mkdir -p /var/log/svscan
 sysrc svscan_logdir=/var/log/svscan
 
 # svscan_lognum         The number of logfiles that multilog will keep if
