@@ -1,0 +1,20 @@
+#!/bin/sh
+
+SERVICE=iceccd
+HOSTNAME=`hostname | sed "s/_//g"`
+PORT=8765
+LOG=/var/log/${SERVICE}.log
+USER=nobody
+UID=`id -u ${USER}`
+GID=`id -g ${USER}`
+
+touch ${LOG}
+chown ${UID}:${GID} ${LOG}
+
+/srv/icecream/sbin/${SERVICE} \
+    -n jail-${HOSTNAME} \
+    -m `sysctl -n kern.smp.cpus` \
+    -l ${LOG} \
+    -vvv \
+    -b /tmp \
+    -N ${HOSTNAME}

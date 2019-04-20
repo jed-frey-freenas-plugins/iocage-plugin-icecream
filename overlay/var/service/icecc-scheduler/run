@@ -1,0 +1,19 @@
+#!/bin/sh
+
+SERVICE=icecc-scheduler
+HOSTNAME=`hostname`       
+PORT=8765
+LOG=/var/log/${SERVICE}.log
+USER=nobody
+UID=`id -u ${USER}`
+GID=`id -g ${USER}`
+
+touch ${LOG}
+chown ${UID}:${GID} ${LOG}
+
+/srv/icecream/sbin/icecc-scheduler \
+    --netname jail-${HOSTNAME} \
+    --port ${PORT} \
+    -vvv \
+    --persistent-client-connection
+
