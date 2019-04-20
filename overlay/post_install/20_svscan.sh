@@ -25,6 +25,6 @@ sysrc svscan_lognum=7
 
 # svscan_logmax         The maximum logfile size for multilog if svscan_logdir
 #                       is set; the multilog default is 99999.
-sysrc svscan_lognum=99999
+sysrc svscan_logmax=99999
 
 service svscan start
