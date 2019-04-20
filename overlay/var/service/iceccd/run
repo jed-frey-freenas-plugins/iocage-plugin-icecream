@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SERVICE=iceccd
-HOSTNAME=`hostname | sed "s/_//g"`
+HOSTNAME=`hostname`
 PORT=8765
 LOG=/var/log/${SERVICE}.log
 USER=nobody
