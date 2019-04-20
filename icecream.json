@@ -4,7 +4,8 @@
       "vnet" : "on",
       "dhcp" : "on",
       "bpf" : "yes",
-      "allow_raw_sockets" : "1"
+      "allow_raw_sockets" : "1",
+      "allow_mount_tmpfs" : "1"
    },
    "plugin_schema" : "2",
    "pkgs" : [
