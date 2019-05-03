@@ -1,7 +1,9 @@
 {
-   "plugin_schema" : "2",
+   "official" : false,
+   "packagesite" : "http://pkg.FreeBSD.org/${ABI}/quarterly",
    "release" : "11.2-RELEASE",
    "artifact" : "https://github.com/jed-frey-freenas-plugins/iocage-plugin-icecream.git",
+   "plugin_schema" : "2",
    "pkgs" : [
       "ca_root_nss",
       "lzo2",
@@ -14,17 +16,6 @@
       "gcc8",
       "daemontools"
    ],
-   "packagesite" : "http://pkg.FreeBSD.org/${ABI}/quarterly",
-   "name" : "icecream",
-   "properties" : {
-      "bpf" : "yes",
-      "boot" : "on",
-      "vnet" : "on",
-      "allow_raw_sockets" : "1",
-      "allow_mount_tmpfs" : "1",
-      "dhcp" : "on"
-   },
-   "official" : false,
    "fingerprints" : {
       "iocage-plugins" : [
          {
@@ -32,5 +23,14 @@
             "fingerprint" : "b0170035af3acc5f3f3ae1859dc717101b4e6c1d0a794ad554928ca0cbb2f438"
          }
       ]
-   }
+   },
+   "properties" : {
+      "vnet" : "on",
+      "allow_mount_tmpfs" : "1",
+      "allow_raw_sockets" : "1",
+      "boot" : "on",
+      "bpf" : "yes",
+      "dhcp" : "on"
+   },
+   "name" : "icecream"
 }
